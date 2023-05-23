@@ -1,9 +1,9 @@
 ## TYSearch Attributes
 
-| 属性名称    | 说明     | 类型                        | 默认值 |
-| ----------- | -------- | --------------------------- | ------ |
-| data        | 搜索项   | Array<[SearchItem]>，见说明 | -      |
-| show-export | 导出按钮 | boolean                     | false  |
+| 属性名称    | 说明     | 类型                      | 默认值 |
+| ----------- | -------- | ------------------------- | ------ |
+| data        | 搜索项   | Array<SearchItem>，见说明 | -      |
+| show-export | 导出按钮 | boolean                   | false  |
 
 ## TYSearch Events
 
