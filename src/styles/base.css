@@ -1,0 +1,73 @@
+:root {
+  /* 主题颜色 */
+  --ty-color-theme: #1966ff;
+
+  /* 基础色 */
+  --ty-color-white: #ffffff;
+  /* base-黑色系 */
+  --ty-color-black: #000000;
+  --ty-color-black-1: #14203c;
+  --ty-color-black-2: #181623;
+  --ty-color-black-3: #2e323c;
+  --ty-color-black-4: #353f57;
+  --ty-color-black-5: #393d46;
+  --ty-color-black-6: #444444;
+  --ty-color-black-7: #586074;
+  --ty-color-black-8: #333333;
+  --ty-color-black-9: #666666;
+  /* base-灰色系 */
+  --ty-color-grey-1: #808eab;
+  --ty-color-grey-2: #fafafa;
+  --ty-color-grey-3: #fafbfc;
+  --ty-color-grey-4: #e6ebf0;
+  --ty-color-grey-5: rgba(17, 31, 68, 0.05);
+  --ty-color-grey-6: #f9f9f9;
+  --ty-color-grey-7: #cccccc;
+  --ty-color-grey-8: #e5f1ff;
+  /* 黄色系 */
+  --ty-color-yellow-1: #efd45c;
+
+  /* 菜单 */
+  --ty-menu-fill-color: var(--ty-color-black-2);
+  /* 欢迎语 */
+  --ty-welcome-text-color: var(--ty-color-black-3);
+  /* 欢迎icon */
+  --ty-welcome-icon-color: var(--ty-color-yellow-1);
+  /* 名称 */
+  --ty-label-text-color: var(--ty-color-black-1);
+  /* 值 */
+  --ty-value-text-color: var(--ty-color-black-5);
+  /* 表头文字 */
+  --ty-thead-text-color: var(--ty-color-black-1);
+  /* 表头背景 */
+  --ty-thead-fill-color: var(--ty-color-grey-2);
+  /* 表体文字 */
+  --ty-thead-text-color: var(--ty-color-black-7);
+  /* 一级面包屑 */
+  --ty-bread-text-color-1: var(--ty-color-grey-1);
+  /* 二级面包屑 */
+  --ty-bread-text-color-2: var(--ty-color-black-7);
+  /* 登录用户 */
+  --ty-user-text-color: var(--ty-color-black-7);
+  /* 登录背景 */
+  --ty-login-fill-color: var(--ty-color-grey-8);
+  /* 系统名称 */
+  --ty-system-text-color: var(--ty-color-black-8);
+  /* 登录欢迎语 */
+  --ty-login-welcome-text-color: var(--ty-color-black-8);
+  /* 主体区背景 */
+  --ty-main-fill-color: var(--ty-color-grey-3);
+  /* 卡片阴影 */
+  --ty-card-shadow: 0px 0px 6px 0px var(--ty-color-grey-4);
+  /* 交互框背景 */
+  --ty-custom-fill-color: var(--ty-color-grey-6);
+  /* 弹框头部背景 */
+  --ty-dialog-head-fill-color: var(--ty-color-grey-2);
+  /* 弹框头部边框 */
+  --ty-dialog-head-border-color: var(--ty-color-grey-4);
+  /* 滚动条颜色 */
+  --ty-scroll-color: var(--ty-color-grey-7);
+
+  /* element-plus主题颜色修改 */
+  --el-color-primary: var(--ty-color-theme);
+}

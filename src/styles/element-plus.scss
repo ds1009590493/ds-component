@@ -1,0 +1,102 @@
+@import "./mixin.scss";
+
+.el-descriptions__body {
+  background-color: transparent !important;
+}
+
+// input框样式
+.el-input {
+  .el-input__count {
+    .el-input__count-inner {
+      background-color: transparent !important;
+    }
+  }
+  .el-input__wrapper {
+    background-color: var(--ty-custom-fill-color);
+  }
+}
+.el-textarea {
+  .el-textarea__inner {
+    background-color: var(--ty-custom-fill-color);
+  }
+  .el-input__count {
+    background-color: transparent !important;
+  }
+}
+
+.el-date-editor.el-input__wrapper {
+  background-color: var(--ty-custom-fill-color);
+}
+
+// 表格样式
+.el-table {
+  tr {
+    th.el-table__cell {
+      background-color: var(--ty-thead-fill-color) !important;
+      color: var(--ty-thead-text-color);
+    }
+  }
+}
+
+// 面包屑样式
+.el-breadcrumb {
+  .el-breadcrumb__item {
+    .el-breadcrumb__inner {
+      font-weight: 400;
+      color: var(--ty-bread-text-color-1);
+    }
+    .el-breadcrumb__separator {
+      color: var(--ty-bread-text-color-1);
+    }
+  }
+  .el-breadcrumb__item:last-child .el-breadcrumb__inner {
+    font-weight: 400;
+    color: var(--ty-bread-text-color-2);
+  }
+}
+
+// 弹框样式
+.el-overlay-dialog {
+  @include vhCenter(center, center);
+}
+.el-dialog {
+  margin: 0 !important;
+  max-height: 96vh;
+  overflow: auto;
+  .el-dialog__header {
+    margin-right: 0;
+    padding: 14px;
+    border-bottom: 1px solid var(--ty-dialog-head-border-color);
+    background-color: var(--ty-dialog-head-fill-color);
+    .el-dialog__headerbtn {
+      top: 0;
+    }
+  }
+  .el-dialog__body {
+    padding: 18px;
+  }
+}
+
+// 菜单
+.el-menu {
+  border-right: unset;
+  .el-sub-menu {
+    .el-menu-item {
+      min-width: unset;
+    }
+  }
+}
+
+// 分页器
+.el-pagination {
+  justify-content: flex-end;
+  .el-pagination__sizes {
+    margin: 0 16px;
+  }
+}
+
+// 空数据占位
+.el-empty {
+  height: 100%;
+  padding: 0;
+}

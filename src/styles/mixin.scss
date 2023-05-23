@@ -1,0 +1,42 @@
+/**
+ * 垂直水平居中 vertical-horizontal-center
+ * $v: 垂直，$h: 水平
+ */
+@mixin vhCenter($v: center, $h: space-between) {
+  display: flex;
+  align-items: $v;
+  justify-content: $h;
+}
+
+/**
+ * 高度，并且文字垂直居中
+ * $h: 高度
+ */
+@mixin textHeight($h) {
+  height: $h;
+  line-height: $h;
+}
+
+/**
+ * 相对定位
+ * $t: 上偏移，$r: 右偏移，$b: 下偏移, $l: 左偏移
+ */
+@mixin relativePos($t: 0, $r: 0, $b: 0, $l: 0) {
+  position: relative;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+}
+
+/**
+ * 绝对定位
+ * $t: 上偏移，$r: 右偏移，$b: 下偏移, $l: 左偏移
+ */
+@mixin absolutePos($t: 0, $r: 0, $b: 0, $l: 0) {
+  position: absolute;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+}

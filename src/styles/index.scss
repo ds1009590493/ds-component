@@ -1,0 +1,76 @@
+@import "./element-plus.scss";
+@import "./mixin.scss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: PingFangSC-Regular, PingFangSC-Medium, PingFang SC;
+  font-size: 14px;
+}
+* {
+  box-sizing: border-box;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+// 滚动条样式
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: var(--ty-scroll-color);
+}
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+}
+
+// 标题左侧样式
+.ty-module-title {
+  @include textHeight(20px);
+  font-weight: 600;
+  color: var(--ty-label-text-color);
+  padding: 10px 0;
+  box-sizing: content-box;
+}
+.ty-module-title::before {
+  content: "";
+  width: 2px;
+  height: 15px;
+  background-color: var(--ty-color-theme);
+  display: inline-block;
+  @include relativePos(2px);
+  margin-right: 6px;
+}
+
+// 表单标题样式
+.ty-module-title-form {
+  @include textHeight(22px);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ty-label-text-color);
+  padding: 8px 0;
+}
+
+// 按钮组，水平居中，距离上方20px，多用于弹框操作按钮
+.ty-btns-group {
+  margin-top: 20px;
+  text-align: center;
+}
+
+// 隐藏地图logo & 文字
+.anchorBL {
+  display: none;
+}
+
+.ty-list-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
