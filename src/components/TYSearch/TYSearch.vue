@@ -68,7 +68,7 @@
         @change="componentEvent(item, 'change')"
       >
         <component
-          :is="item.slotComponment || 'el-radio'"
+          :is="item.slotComponent || 'el-radio'"
           v-for="(option, idx) in item.options"
           :key="idx"
           :label="item.props ? option[item.props.value] : option.value"
@@ -83,7 +83,7 @@
         v-model="searchQuery[item.param]"
       >
         <component
-          :is="item.slotComponment || 'el-checkbox'"
+          :is="item.slotComponent || 'el-checkbox'"
           v-for="(option, idx) in item.options"
           :key="idx"
           :label="item.props ? option[item.props.value] : option.value"
@@ -108,7 +108,7 @@ export interface SearchItem {
   label: string // 搜索项名称
   type: string // 搜索项类型，input，select, date, daterange...
   defaultValue?: any // 默认value值
-  slotComponment?: string // 动态组件名称
+  slotComponent?: string // 动态组件名称
   param: string // v-model绑定的名称
   config?: object // element-plus的attribute,默认所有的搜索都可以clearable，所以该attribute不用传
   options?: any[] // 下拉选项，type为select,checkbox,radio时必传

@@ -20,16 +20,17 @@
 
 ## SearchItem 接口
 
-| 属性名       | 说明                                                                                                                          | 类型     | 是否必须                                       |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------- | -------- | ---------------------------------------------- |
-| label        | 搜索项名称                                                                                                                    | string   | true                                           |
-| type         | 搜索项类型                                                                                                                    | string   | true                                           |
-| param        | 搜索项绑定值名称                                                                                                              | string   | true                                           |
-| defaultValue | 搜索项默认值                                                                                                                  | any      | false，不传为""                                |
-| config       | element-plus 的 attribute，默认所有的搜索项都可以 clearable，所以该 attribute 不用传，如果不需要 clearable 效果，请传入 false | object   | false                                          |
-| options      | select 的下拉选项                                                                                                             | object[] | false，type 为 select,radio,checkbox 时为 true |
-| props        | option 的 key-value 配置，默认名称为 label & value                                                                            | object   | false                                          |
-| events       | 事件列表，对应 element-plus 组件的事件，key 为事件名称，value 为回调函数                                                      | object   | false                                          |
+| 属性名        | 说明                                                                                                                          | 类型                      | 是否必须                                                                      |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------- | ----------------------------------------------------------------------------- | ------------------ | ------ | ----- |
+| label         | 搜索项名称                                                                                                                    | string                    | true                                                                          |
+| type          | 搜索项类型                                                                                                                    | string                    | true                                                                          |
+| param         | 搜索项绑定值名称                                                                                                              | string                    | true                                                                          |
+| defaultValue  | 搜索项默认值                                                                                                                  | any                       | false，不传为""                                                               |
+| config        | element-plus 的 attribute，默认所有的搜索项都可以 clearable，所以该 attribute 不用传，如果不需要 clearable 效果，请传入 false | object                    | false                                                                         |
+| options       | select 的下拉选项，每一项可增加 optionConfig 属性，作为 option 的 attributes                                                  | object[]                  | false，type 为 select,radio,checkbox 时为 true                                |
+| props         | option 的 key-value 配置，默认名称为 label & value                                                                            | object                    | false                                                                         |
+| events        | 事件列表，对应 element-plus 组件的事件，key 为事件名称，value 为回调函数                                                      | object                    | false                                                                         |
+| slotComponent | 动态组件名称，适用于 type 为 radio                                                                                            | checkbox，默认为 el-radio | el-checkbox，当需要使用 button 样式时，显时传入该属性，名称为 el-radio-button | el-checkbox-button | string | false |
 
 ## SearchItem.type 字典
 
