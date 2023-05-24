@@ -40,6 +40,7 @@
           :key="item.props ? option[item.props.value] : option.value"
           :label="item.props ? option[item.props.label] : option.label"
           :value="item.props ? option[item.props.value] : option.value"
+          v-bind="option.optionConfig"
         ></el-option>
       </el-select>
       <!-- date -->
@@ -66,28 +67,30 @@
         v-bind="item.config"
         @change="componentEvent(item, 'change')"
       >
-        <el-radio
+        <component
+          :is="item.slotComponment || 'el-radio'"
           v-for="(option, idx) in item.options"
           :key="idx"
           :label="item.props ? option[item.props.value] : option.value"
+          v-bind="option.optionConfig"
         >
           {{ item.props ? option[item.props.label] : option.label }}
-        </el-radio>
+        </component>
       </el-radio-group>
       <!-- checkbox -->
       <el-checkbox-group
         v-if="item.type === 'checkbox'"
         v-model="searchQuery[item.param]"
-        v-bind="item.config"
-        @change="componentEvent(item, 'change')"
       >
-        <el-checkbox
+        <component
+          :is="item.slotComponment || 'el-checkbox'"
           v-for="(option, idx) in item.options"
           :key="idx"
           :label="item.props ? option[item.props.value] : option.value"
+          v-bind="option.optionConfig"
         >
           {{ item.props ? option[item.props.label] : option.label }}
-        </el-checkbox>
+        </component>
       </el-checkbox-group>
     </div>
     <div class="ty-search-item">
@@ -105,6 +108,7 @@ export interface SearchItem {
   label: string // 搜索项名称
   type: string // 搜索项类型，input，select, date, daterange...
   defaultValue?: any // 默认value值
+  slotComponment?: string // 动态组件名称
   param: string // v-model绑定的名称
   config?: object // element-plus的attribute,默认所有的搜索都可以clearable，所以该attribute不用传
   options?: any[] // 下拉选项，type为select,checkbox,radio时必传
@@ -250,6 +254,8 @@ onMounted(() => {
   flex-wrap: wrap;
 }
 .ty-search-item {
+  display: flex;
+  align-items: center;
   margin-right: var(--ty-module-margin);
   margin-bottom: var(--ty-module-margin);
 }
